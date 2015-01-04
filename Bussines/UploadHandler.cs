@@ -1,5 +1,6 @@
 ﻿using System;
 using Database;
+using System.IO;
 
 namespace Bussines
 {
@@ -11,9 +12,9 @@ namespace Bussines
         {
             _uploadManager = new UploadManager();
         }
-        public void Upload(String fileName)
+        public void Upload(String fileName,Stream inputStream)
         {
-            _uploadManager.Upload(fileName);
+            _uploadManager.Upload(fileName,inputStream);
         }
     }
 }

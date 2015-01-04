@@ -10,7 +10,7 @@ namespace Database
         private const string AccountName = "mediudocs";
         private const string AccountKey = "mqdJ3zmEJHjo/HonW1gXysv0MGZnCc5VuSM05AwhH7wfNXAEhn+HhW1KEtDjN+6Y/YoKNb+p5HFk/r9jeLIuoA==";
 
-        public void Upload(String fileName)
+        public void Upload(String fileName,Stream inStream)
         {
             try
             {
@@ -22,13 +22,9 @@ namespace Database
 
                 var sampleContainer = client.GetContainerReference("docs");
                 sampleContainer.CreateIfNotExists();
-
                 var blob = sampleContainer.GetBlockBlobReference(fileName);
-                using (Stream file = File.OpenRead(fileName))
-                {
-                    blob.UploadFromStream(file);
-                }
-                blob.Uri.ToString();
+                     blob.UploadFromStream(inStream);
+              //  blob.Uri.ToString();
 
             }
             catch (Exception ex)

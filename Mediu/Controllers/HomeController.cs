@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using System.Web.Mvc;
 using Bussines;
 
@@ -37,7 +38,7 @@ namespace Mediu.Controllers
             {
                 ViewBag.UploadMessage = String.Format("Got image {0} of type {1} and size {2}",
                     file.FileName, file.ContentType, file.ContentLength);
-                _uploadHandler.Upload(file.FileName);
+                _uploadHandler.Upload(file.FileName,file.InputStream);
             }
             return View("Index");
         }
