@@ -12,9 +12,9 @@ namespace Bussines
         {
             _uploadManager = new UploadManager();
         }
-        public void Upload(String fileName,Stream inputStream)
+        public string Upload(String filepath,Stream inputStream)
         {
-            _uploadManager.Upload(fileName,inputStream);
+            return _uploadManager.Upload(filepath, inputStream);
         }
     }
 }

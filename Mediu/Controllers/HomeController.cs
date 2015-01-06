@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Web;
 using System.Web.Mvc;
 using Bussines;
@@ -8,10 +9,11 @@ namespace Mediu.Controllers
     public class HomeController : Controller
     {
         private readonly UploadHandler _uploadHandler;
-
+        private readonly FilesHandler _filesHandler; 
         public HomeController()
         {
             _uploadHandler=new UploadHandler();
+            _filesHandler=new FilesHandler();
         }
         public ActionResult Index()
         {
@@ -27,7 +29,7 @@ namespace Mediu.Controllers
         [HttpPost]
         public ActionResult Loadd()
         {
-            string path = @"D:\Temp\";
+            string path;
 
             var file = Request.Files["file"];
             if (file == null)
@@ -38,7 +40,8 @@ namespace Mediu.Controllers
             {
                 ViewBag.UploadMessage = String.Format("Got image {0} of type {1} and size {2}",
                     file.FileName, file.ContentType, file.ContentLength);
-                _uploadHandler.Upload(file.FileName,file.InputStream);
+                path=_uploadHandler.Upload(file.FileName,file.InputStream);
+                _filesHandler.AddFile(path);
             }
             return View("Index");
         }

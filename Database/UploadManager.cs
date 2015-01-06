@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Net;
+using System.Runtime.Remoting.Messaging;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Auth;
 
@@ -10,7 +12,7 @@ namespace Database
         private const string AccountName = "mediudocs";
         private const string AccountKey = "mqdJ3zmEJHjo/HonW1gXysv0MGZnCc5VuSM05AwhH7wfNXAEhn+HhW1KEtDjN+6Y/YoKNb+p5HFk/r9jeLIuoA==";
 
-        public void Upload(String fileName,Stream inStream)
+        public string Upload(String fileName,Stream inStream)
         {
             try
             {
@@ -24,14 +26,15 @@ namespace Database
                 sampleContainer.CreateIfNotExists();
                 var blob = sampleContainer.GetBlockBlobReference(fileName);
                      blob.UploadFromStream(inStream);
-              //  blob.Uri.ToString();
+                return blob.Uri.ToString();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
+            return null;
         }
-
+       
     }
 }
