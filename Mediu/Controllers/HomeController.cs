@@ -9,11 +9,13 @@ namespace Mediu.Controllers
     public class HomeController : Controller
     {
         private readonly UploadHandler _uploadHandler;
-        private readonly FilesHandler _filesHandler; 
+        private readonly FilesHandler _filesHandler;
+        private readonly RdfHandler _rdfHandler;
         public HomeController()
         {
             _uploadHandler=new UploadHandler();
             _filesHandler=new FilesHandler();
+            _rdfHandler = new RdfHandler(@"D:\!MASTER\TAIP\Mediu\Database\Mediu.owl"); //Server.MapPath(@"D:\!MASTER\TAIP\Mediu\Database\Mediu.owl"));
         }
         public ActionResult Index()
         {
@@ -44,6 +46,18 @@ namespace Mediu.Controllers
                 _filesHandler.AddFile(path);
             }
             return View("Index");
+        }
+
+        public ActionResult GetProblemeDeMediu()
+        {
+            var result=_rdfHandler.GetProblemeDeMediu();
+            return View(result);
+        }
+
+        public ActionResult GetSectoareSiActivitati()
+        {
+            var result = _rdfHandler.GetSectoareSiActivitati();
+            return View(result);
         }
     }
 }

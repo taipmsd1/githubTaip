@@ -171,6 +171,8 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Load.cshtml" />
+    <Content Include="Views\Home\GetProblemeDeMediu.cshtml" />
+    <Content Include="Views\Home\GetSectoareSiActivitati.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

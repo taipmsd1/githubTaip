@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FilesHandler.cs" />
+    <Compile Include="RdfHandler.cs" />
     <Compile Include="UploadHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

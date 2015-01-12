@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/andreea/ontologies/2015/0/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/andreea/ontologies/2015/0/untitled-ontology-7"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Agricultura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Agricultura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Apa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Apa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Biodiversitate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Biodiversitate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ConsumulGospodariilor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ConsumulGospodariilor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#DeseurileSiResurseleMateriale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#DeseurileSiResurseleMateriale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#DomeniulPopulatieiSiAlEconomiei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#DomeniulPopulatieiSiAlEconomiei">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Energia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Energia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#FolosireaTerenurilor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#FolosireaTerenurilor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Industria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Industria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#MediuSiSanatate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#MediuSiSanatate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Pescuitul -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Pescuitul">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#PoluareaAtmosferica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#PoluareaAtmosferica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProduceChimice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProduceChimice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ResurseNaturale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ResurseNaturale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SchimbariClimatice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SchimbariClimatice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Solul -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Solul">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Transporturi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Transporturi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Turism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Turism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#SectoareSiActivitati"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Zgomotul -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#Zgomotul">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andreea/ontologies/2015/Mediu#ProblemeDeMediu"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
