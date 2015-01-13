@@ -2,7 +2,9 @@
 @{
     ViewBag.Title = "Probleme de mediu";
 }
-@foreach (var problemaDeMediu in @Model)
-{
-    <li>@problemaDeMediu</li>
-}
+<ul class="list-group">
+    @foreach (var problemaDeMediu in @Model)
+    {
+        <li class="">@problemaDeMediu</li>
+    }
+</ul>

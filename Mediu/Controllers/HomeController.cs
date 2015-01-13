@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Web;
 using System.Web.Mvc;
 using Bussines;
 
@@ -15,7 +14,8 @@ namespace Mediu.Controllers
         {
             _uploadHandler=new UploadHandler();
             _filesHandler=new FilesHandler();
-            _rdfHandler = new RdfHandler(@"D:\!MASTER\TAIP\Mediu\Database\Mediu.owl"); //Server.MapPath(@"D:\!MASTER\TAIP\Mediu\Database\Mediu.owl"));
+            string path = Path.Combine(System.Web.HttpContext.Current.Server.MapPath(@"/Mediu.owl"));
+            _rdfHandler = new RdfHandler(path);
         }
         public ActionResult Index()
         {
@@ -40,7 +40,7 @@ namespace Mediu.Controllers
             }
             else
             {
-                ViewBag.UploadMessage = String.Format("Got image {0} of type {1} and size {2}",
+                ViewBag.UploadMessage = String.Format("Got file {0} of type {1} and size {2}",
                     file.FileName, file.ContentType, file.ContentLength);
                 path=_uploadHandler.Upload(file.FileName,file.InputStream);
                 _filesHandler.AddFile(path);
